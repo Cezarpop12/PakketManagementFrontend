@@ -2,6 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Paper,Button } from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function Pakketje() {
   const paperStyle={padding:'50px 20px', width:600, margin:"20px auto"}
@@ -55,10 +56,20 @@ export default function Pakketje() {
     <Paper elevation={3} style={paperStyle}>
       {pakketjes.map(pakketje=>(
         <Paper elevation={6} style={{margin:"10px", padding:"15px", textAlign:"left"}} key={pakketje.id}>
-          Pakketje<br/>
+          <b>Pakketje&emsp;&emsp;&emsp;&emsp;Status: </b>{pakketje.status}
           <br/>
-          ID:{pakketje.id}<br/>
-          Code:{pakketje.code}
+          <br/>
+          ID: {pakketje.id}&emsp;&emsp;&emsp;
+          &emsp;&emsp;&emsp;&emsp;
+          &emsp;&emsp;&emsp;&emsp;
+          &emsp;&emsp;&emsp;&emsp;
+          &emsp;&emsp;&emsp;&emsp;
+          &emsp;&emsp;<Button variant="contained" style={{backgroundColor:"black"}} color="secondary" onClick={handleClick}>
+          Verzenden <ArrowForwardIcon />
+         </Button>
+          <br/>
+          Code: {pakketje.code}
+          <br/>
           </Paper>
       ))
 }

@@ -1,0 +1,51 @@
+version: "3.8"
+
+services:
+
+  mysqldb:
+    image: mysql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=patriot12345
+      - MYSQL_PASSWORD=patriot12345
+      - MYSQL_DATABASE=pakketjes
+    networks:
+      - my-network
+    volumes:
+      - mysql-data
+    container_name: mysqldb
+  
+  backend:
+    image: backend
+    ports:
+      - 8080:8080
+    environment: 
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/pakketjes?autoReconnect=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: "pakketje"
+      SPRING_DATASOURCE_PASSWORD: "patriot12345"
+    networks:
+      - my-network
+    container_name: backend
+    depends_on:
+      - mysqldb
+
+  frontend:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: frontend
+    ports:
+      - 3000:80
+    depends_on:
+      - backend
+      - mysqldb  
+
+networks:
+  my-network:
+    name: my-network
+
+
+volumes:
+  mysql-data:
+    name: mysql-data

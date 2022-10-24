@@ -1,13 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import Appbar from './components/Appbar'
-import Pakketje from './components/Pakketje'
+import HomePagina from './pagina/HomePagina'
+
 
 function App() {
   return (
     <div className="App">
-     <Appbar/>
-     <Pakketje/>
+      <Appbar />
+      <HomePagina />
     </div>
   );
 }

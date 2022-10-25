@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Appbar() {
   return (
+    <div data-testid="the_man"> 
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
@@ -28,5 +29,6 @@ export default function Appbar() {
         </Toolbar>
       </AppBar>
     </Box>
+    </div>
   );
 }

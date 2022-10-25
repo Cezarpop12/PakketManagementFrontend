@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="1" failures="0" errors="0" time="2.522">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-10-25T11:27:36" time="1.759" tests="1">
+    <testcase classname=" should render Appbar component" name=" should render Appbar component" time="0.081">
+    </testcase>
+  </testsuite>
+</testsuites>

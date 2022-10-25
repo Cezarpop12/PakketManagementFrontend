@@ -59,7 +59,7 @@ export default function HomePagina() {
               Verzenden <ArrowForwardIcon />
             </Button>
             <br />
-            Code: {pakketje.code}
+            Codee: {pakketje.code}
             <br />
           </Paper>
         ))

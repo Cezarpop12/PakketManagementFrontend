@@ -17,7 +17,7 @@ export default function HomePagina() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(pakketje)
     }).then(() => {
-      console.log("Pakketje is aangemaakt!")
+      console.log("Pakketje is aangemaaktt!")
     })
   }
 

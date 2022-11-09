@@ -22,14 +22,14 @@ export default function HomePagina() {
   }
 
   //useffect = voor bij pagina starten om info te loaden, in dit geval alle pakketjes tonen bij opstart
-  // React.useEffect(() => {
-  //   fetch("http://localhost:8080/pakketje/getAll")
-  //     .then(res => res.json())
-  //     .then((result) => {
-  //       setPakketjes(result);
-  //     }
-  //     )
-  // }, [])
+  React.useEffect(() => {
+    fetch("http://localhost:8080/pakketje/getAll")
+      .then(res => res.json())
+      .then((result) => {
+        setPakketjes(result);
+      }
+      )
+  }, [])
 
   const element = document.querySelector('#put-request .date-updated');
   const requestOptions = {

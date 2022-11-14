@@ -36,7 +36,7 @@ export default function PakketjeAanmaken() {
 return (
   <>
   <Appbar />
-  <h1 style={{color:"blue"}}><u>Maak een pakketje aan</u></h1>
+  <h1 style={{color:"black", textAlign:"center"}}>Maak een pakketje aan</h1>
   <Container>
     <Paper elevation={3} style={paperStyle}>
       <form>
@@ -44,7 +44,7 @@ return (
         value={code}
         onChange={(e)=>setCode(e.target.value)}
         />
-        <Button variant='contained' color="secondary" onClick={handleClick}>
+        <Button variant='contained' color="secondary" style={{backgroundColor:"#3F00FF", textAlign:"center"}} onClick={handleClick}>
           Opslaan
         </Button>
       </form>

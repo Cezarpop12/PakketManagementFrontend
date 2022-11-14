@@ -6,9 +6,10 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';  
 
 export default function Appbar() {
-  return (
+  return (  
     <div data-testid="the_man"> 
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -25,7 +26,13 @@ export default function Appbar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Pakketjes Manager
           </Typography>
-          <Button color="inherit">Pakketje aanmaken</Button>
+          <Link to='/' className='btn'>
+            Home
+          </Link>
+          &emsp;
+          <Link to='/PakketjeAanmaken'>
+            Pakketje aanmaken
+          </Link>
         </Toolbar>
       </AppBar>
     </Box>

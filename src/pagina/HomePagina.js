@@ -3,27 +3,17 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Paper, Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Appbar from '../components/Appbar';
+import App from '../App';
 
 export default function HomePagina() {
   const paperStyle = { padding: '50px 20px', width: 600, margin: "20px auto" }
-  const [code, setCode] = React.useState('')
+  // const [code, setCode] = React.useState('')
   const [pakketjes, setPakketjes] = React.useState([])
-  const handleClick = (e) => {
-    e.preventDefault()
-    const pakketje = { code }
-    console.log(pakketje)
-    fetch("http://localhost:8080/pakketje/add", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(pakketje)
-    }).then(() => {
-      console.log("Pakketje is aangemaaktt!")
-    })
-  }
 
   //useffect = voor bij pagina starten om info te loaden, in dit geval alle pakketjes tonen bij opstart
   React.useEffect(() => {
-    fetch("http://localhost:8080/pakketje/getAll")
+    fetch("http://localhost:3306/pakketjesdb/getAll")
       .then(res => res.json())
       .then((result) => {
         setPakketjes(result);
@@ -42,6 +32,8 @@ export default function HomePagina() {
     .then(data => element.innerHTML = data.updatedAt);
 
   return (
+    <>
+    <Appbar />
     <container>
       <h1>Pakketjes</h1>
       <Paper elevation={3} style={paperStyle}>
@@ -66,5 +58,6 @@ export default function HomePagina() {
         }
       </Paper>
     </container>
+    </>
   );
 }

@@ -24,7 +24,7 @@ export default function PakketjeAanmaken() {
     e.preventDefault()
     const pakketje = { code }
     console.log(pakketje)
-    fetch("http://localhost:3306/pakketjesdb/add", {
+    fetch("http://localhost:8080/pakketje/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(pakketje)

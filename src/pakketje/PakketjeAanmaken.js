@@ -19,7 +19,6 @@ import Appbar from '../components/Appbar';
 export default function PakketjeAanmaken() {
   const paperStyle = { padding: '50px 20px', width: 600, margin: "20px auto" }
   const [code, setCode] = React.useState('')
-  const [pakketjes, setPakketjes] = React.useState([])
   // const classes = useStyles
   const handleClick = (e) => {
     e.preventDefault()
@@ -33,15 +32,6 @@ export default function PakketjeAanmaken() {
       console.log("Pakketje is aangemaaktt!")
     })
   }
-
-  React.useEffect(() => {
-    fetch("http://localhost:3306/pakketjesdb/getAll")
-      .then(res => res.json())
-      .then((result) => {
-        setPakketjes(result);
-      }
-      )
-  }, [])
 
 return (
   <>
@@ -58,31 +48,8 @@ return (
           Opslaan
         </Button>
       </form>
+      {code}
     </Paper>
-
-    <h1>Pakketjes</h1>
-      <Paper elevation={3} style={paperStyle}>
-        {pakketjes.map(pakketje => (
-          <Paper elevation={6} style={{ margin: "10px", padding: "15px", textAlign: "left" }} key={pakketje.id}>
-            <b>Pakketje&emsp;&emsp;&emsp;&emsp;</b>Status: {pakketje.status}
-            <br />
-            <br />
-            ID: {pakketje.id}&emsp;&emsp;&emsp;
-            &emsp;&emsp;&emsp;&emsp;
-            &emsp;&emsp;&emsp;&emsp;
-            &emsp;&emsp;&emsp;&emsp;
-            &emsp;&emsp;&emsp;&emsp;
-            &emsp;&emsp;<Button variant="contained" style={{ backgroundColor: "black" }} color="secondary">
-              Verzenden <ArrowForwardIcon />
-            </Button>
-            <br />
-            Codee: {pakketje.code}
-            <br />
-          </Paper>
-        ))
-        }
-      </Paper>
-
   </Container>
   </>
   );

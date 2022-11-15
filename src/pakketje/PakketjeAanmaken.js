@@ -8,23 +8,14 @@ import { ClassNames } from '@emotion/react';
 import { Link } from 'react-router-dom';
 import Appbar from '../components/Appbar';
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     '& > *': {
-//       margin: theme.spacing(1),
-//   },
-// },
-// }));
-
 export default function PakketjeAanmaken() {
   const paperStyle = { padding: '50px 20px', width: 600, margin: "20px auto" }
   const [code, setCode] = React.useState('')
-  // const classes = useStyles
   const handleClick = (e) => {
     e.preventDefault()
     const pakketje = { code }
     console.log(pakketje)
-    fetch("http://localhost:8080/pakketje/add", {
+    fetch("http://localhost:3306/pakketjesdb/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(pakketje)

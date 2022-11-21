@@ -6,7 +6,10 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import LoginButton from './LoginButton';
+import LogoutButton from './LogoutButton';
 import { Link } from 'react-router-dom';  
+import { Login } from '@mui/icons-material';
 
 export default function Appbar() {
   return (  
@@ -33,6 +36,11 @@ export default function Appbar() {
           <Link to='/PakketjeAanmaken'>
             Pakketje aanmaken
           </Link>
+          &emsp;
+          <main className='column'>
+          <LoginButton />
+          <LogoutButton />
+          </main>
         </Toolbar>
       </AppBar>
     </Box>

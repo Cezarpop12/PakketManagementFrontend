@@ -13,7 +13,7 @@ export default function HomePagina() {
 
   //useffect = voor bij pagina starten om info te loaden, in dit geval alle pakketjes tonen bij opstart
   React.useEffect(() => {
-    fetch("http://localhost:3306/pakketjesdb/getAll")
+    fetch("http://localhost:8080/pakketje/getAll")
       .then(res => res.json())
       .then((result) => {
         setPakketjes(result);
@@ -21,21 +21,21 @@ export default function HomePagina() {
       )
   }, [])
 
-  const element = document.querySelector('#put-request .date-updated');
-  const requestOptions = {
-    method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ title: 'Fetch PUT Request' })
-  };
-  fetch('http://localhost:8080/pakketje/updateOnderweg', requestOptions)
-    .then(response => response.json())
-    .then(data => element.innerHTML = data.updatedAt);
+  // const element = document.querySelector('#put-request .date-updated');
+  // const requestOptions = {
+  //   method: 'PUT',
+  //   headers: { 'Content-Type': 'application/json' },
+  //   body: JSON.stringify({ title: 'Fetch PUT Request' })
+  // };
+  // fetch('http://localhost:8080/pakketje/updateOnderweg', requestOptions)
+  //   .then(response => response.json())
+  //   .then(data => element.innerHTML = data.updatedAt);
 
   return (
     <>
     <Appbar />
     <container>
-      <h1>Pakketjes</h1>
+      <h1 style={{textAlign:"center"}}>Pakketjes</h1>
       <Paper elevation={3} style={paperStyle}>
         {pakketjes.map(pakketje => (
           <Paper elevation={6} style={{ margin: "10px", padding: "15px", textAlign: "left" }} key={pakketje.id}>

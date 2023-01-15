@@ -27,8 +27,22 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm test
     
+  #  - uses: actions/checkout@v3
+ #   - name: Audit URLs using Lighthouse
+   #   uses: treosh/lighthouse-ci-action@v9
+   #  with:
+    #    urls: |
+      #    http://localhost:3000/
+      # budgetPath: ./budget.json 
+       # uploadArtifacts: true 
+      #  temporaryPublicStorage: true
+    
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: npx cypress run
+      uses: cypress-io/github-action@v5 
+      
     - name: Install dependencies
       run: yarn
     - name: Test and coverage

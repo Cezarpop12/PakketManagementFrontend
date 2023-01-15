@@ -29,11 +29,10 @@ jobs:
     - run: npm ci
     
     - uses: actions/checkout@v3
-    - name: Audit URLs using Lighthouse
-      uses: treosh/lighthouse-ci-action@v9
-      with:
-        urls: |
-          http://localhost:3000/
+    - name: run Lighthouse CI
+    - run: |
+          npm install -g @lhci/cli@0.8.x
+          lhci autorun
     
     - name: Checkout
       uses: actions/checkout@v3

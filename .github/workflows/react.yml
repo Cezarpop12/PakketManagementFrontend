@@ -27,14 +27,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
+    
     - name: Checkout
       uses: actions/checkout@v3
-
     - name: Cypress run
-      uses: cypress-io/github-action@v3.8.2
-      with:
-        build: npm run build
-        start: npm start
+      uses: cypress-io/github-action@v5
     
     - name: Install dependencies
       run: yarn

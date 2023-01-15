@@ -9,7 +9,7 @@ const LogoutButton = () => {
                 Uitloggen
             </button>
         )
-    ) 
+    )
 }
 
 export default LogoutButton

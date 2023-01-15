@@ -1,11 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="2" failures="0" errors="0" time="11.294">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-11-21T15:23:43" time="1.086" tests="1">
+<testsuites name="jest tests" tests="3" failures="1" errors="0" time="4.042">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-12-21T10:00:18" time="1.248" tests="1">
     <testcase classname=" test" name=" test" time="0.002">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-11-21T15:23:43" time="10.011" tests="1">
-    <testcase classname=" should render Appbar component" name=" should render Appbar component" time="0.066">
+  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2022-12-21T10:00:18" time="1.757" tests="1">
+    <testcase classname=" should show total number of pakketjes from api" name=" should show total number of pakketjes from api" time="0.057">
+      <failure>TypeError: Cannot read properties of undefined (reading &apos;then&apos;)
+    at C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\src\components\TotalePakketjes.js:7:5
+    at commitHookEffectListMount (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\react-dom\cjs\react-dom.development.js:23150:26)
+    at commitPassiveMountOnFiber (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\react-dom\cjs\react-dom.development.js:24931:11)
+    at commitPassiveMountEffects_complete (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\react-dom\cjs\react-dom.development.js:24891:9)
+    at commitPassiveMountEffects_begin (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\react-dom\cjs\react-dom.development.js:24878:7)
+    at commitPassiveMountEffects (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\react-dom\cjs\react-dom.development.js:24866:3)
+    at flushPassiveEffectsImpl (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\react-dom\cjs\react-dom.development.js:27039:3)
+    at flushPassiveEffects (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\react-dom\cjs\react-dom.development.js:26984:14)
+    at C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\react-dom\cjs\react-dom.development.js:26769:9
+    at flushActQueue (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\react\cjs\react.development.js:2667:24)
+    at act (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\react\cjs\react.development.js:2582:11)
+    at C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\@testing-library\react\dist\act-compat.js:63:25
+    at renderRoot (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\@testing-library\react\dist\pure.js:159:26)
+    at render (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\@testing-library\react\dist\pure.js:246:10)
+    at Object.&lt;anonymous&gt; (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\src\components\test\TotalePakketjes.test.js:8:5)
+    at Promise.then.completed (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\jest-circus\build\utils.js:391:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\jest-circus\build\utils.js:316:10)
+    at _callCircusTest (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\jest-circus\build\run.js:218:40)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at _runTest (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\jest-circus\build\run.js:155:3)
+    at _runTestsForDescribeBlock (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\jest-circus\build\run.js:66:9)
+    at run (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\jest-circus\build\run.js:25:3)
+    at runAndTransformResultsToJestFormat (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:170:21)
+    at jestAdapter (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:82:19)
+    at runTestInternal (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\jest-runner\build\runTest.js:389:16)
+    at runTest (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\jest-runner\build\runTest.js:475:34)
+    at Object.worker (C:\Users\mrcha\OneDrive\Bureaublad\PakketManagement\PakketjesFrontMain\node_modules\jest-runner\build\testWorker.js:133:12)</failure>
+    </testcase>
+    <testcase classname=" should show initial number of pakketjes if api fails" name=" should show initial number of pakketjes if api fails" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-12-21T10:00:18" time="2.612" tests="1">
+    <testcase classname=" should render Appbar component" name=" should render Appbar component" time="0.109">
     </testcase>
   </testsuite>
 </testsuites>

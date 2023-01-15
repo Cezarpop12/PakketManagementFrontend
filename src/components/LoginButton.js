@@ -9,7 +9,7 @@ const LoginButton = () => {
                 Inloggen
             </button>
         )
-    ) 
+    )
 }
 
 export default LoginButton

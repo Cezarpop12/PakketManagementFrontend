@@ -40,7 +40,7 @@ jobs:
     
     - name: Checkout
       uses: actions/checkout@v3
-    - name: npx cypress run
+    - name: Cypress run
       uses: cypress-io/github-action@v5 
       
     - name: Install dependencies

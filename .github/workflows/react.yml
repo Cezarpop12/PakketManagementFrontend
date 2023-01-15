@@ -28,6 +28,15 @@ jobs:
         cache: 'npm'
     - run: npm ci
     
+    - uses: actions/checkout@v3
+    - name: Audit URLs using Lighthouse
+      uses: treosh/lighthouse-ci-action@v9
+      with:
+        urls: |
+          http://localhost:3000/
+        uploadArtifacts: true 
+        temporaryPublicStorage: true 
+    
     - name: Checkout
       uses: actions/checkout@v3
     - name: Cypress run
